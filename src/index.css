@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #F8FAFC;
+    --surface: #FFFFFF;
+    --text: #0F172A;
+    --text-muted: #475569;
+    --border: #E2E8F0;
+    --primary: #005c55;
+    --primary-hover: #115E59;
+    --focus: #2563EB;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f7faf8;
+    color: #181c1c;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  /* Respect prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Focus visible styles */
+  :focus-visible {
+    outline: 2px solid #2563EB;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Remove default focus for mouse users */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@layer components {
+  /* Skip link for accessibility */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: #005c55;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 14px;
+    z-index: 9999;
+    border-radius: 0 0 8px 0;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center h-11 px-6 bg-primary text-on-primary rounded font-medium text-label-sm transition-colors hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-focus focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed;
+    min-width: 44px;
+  }
+
+  /* Secondary button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center h-11 px-6 bg-surface border border-border text-on-surface rounded font-medium text-label-sm transition-colors hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-focus focus:ring-offset-2;
+    min-width: 44px;
+  }
+
+  /* Page container */
+  .page-container {
+    @apply w-full max-w-content mx-auto px-margin-mobile md:px-margin-desktop;
+  }
+
+  /* Section padding */
+  .section-py {
+    @apply py-section-padding-mobile md:py-section-padding-desktop;
+  }
+
+  /* Card */
+  .card {
+    @apply bg-surface rounded-xl border border-border;
+  }
+
+  /* FAQ accordion */
+  .faq-item {
+    @apply bg-surface border border-border rounded-lg overflow-hidden mb-4 transition-shadow duration-200;
+  }
+  .faq-item[open] {
+    @apply border-primary shadow-sm;
+  }
+  .faq-item summary {
+    @apply cursor-pointer px-6 py-5 flex items-center justify-between list-none font-semibold text-on-surface text-title-md select-none;
+  }
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-item summary:focus-visible {
+    @apply outline-none ring-2 ring-focus ring-inset;
+  }
+  .faq-content {
+    @apply px-6 pb-6 text-on-surface-variant text-body-lg;
+  }
+  .faq-chevron {
+    @apply transition-transform duration-200 text-primary flex-shrink-0;
+  }
+  details[open] .faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Policy page sections */
+  .policy-section {
+    @apply border-t border-border pt-8 mt-8;
+  }
+  .policy-section:first-child {
+    @apply border-t-0 pt-0 mt-0;
+  }
+}
