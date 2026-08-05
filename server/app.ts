@@ -15,6 +15,9 @@ import licensesRouter from './routes/licenses.js'
 
 const app = express()
 
+// Enable trust proxy for Vercel reverse proxy (for rate limiting client IPs)
+app.set('trust proxy', 1)
+
 const allowedAppUrl = (process.env.VITE_APP_URL || '').replace(/\/$/, '')
 
 app.use(
