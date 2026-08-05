@@ -15,24 +15,30 @@ import licensesRouter from './routes/licenses'
 
 const app = express()
 
-// ─── CORS ─────────────────────────────────────────────────────────────────────
-
-const allowedOrigins = [
-  process.env.VITE_APP_URL,
-  'http://localhost:5173', // Vite dev server
-  'http://localhost:3001', // Express dev server
-].filter(Boolean) as string[]
+const allowedAppUrl = (process.env.VITE_APP_URL || '').replace(/\/$/, '')
 
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (e.g., desktop app, Postman, curl)
+      // Allow requests with no origin (e.g., desktop app, Postman, curl, direct browser GET)
       if (!origin) return callback(null, true)
-      if (allowedOrigins.includes(origin)) return callback(null, true)
-      callback(new Error(`CORS: Origin ${origin} not allowed.`))
+
+      const cleanOrigin = origin.replace(/\/$/, '')
+
+      if (
+        (allowedAppUrl && cleanOrigin === allowedAppUrl) ||
+        cleanOrigin.endsWith('.vercel.app') ||
+        cleanOrigin.startsWith('http://localhost:') ||
+        cleanOrigin.startsWith('http://127.0.0.1:')
+      ) {
+        return callback(null, true)
+      }
+
+      // Reject politely without throwing an unhandled Express 500 exception
+      callback(null, false)
     },
     methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'x-webhook-signature', 'x-webhook-timestamp', 'x-webhook-version'],
     credentials: false,
   })
 )
