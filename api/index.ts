@@ -8,6 +8,6 @@
  * The webhook route uses express.raw() (registered in server/app.ts before
  * express.json()) so the raw body is preserved for Cashfree signature verification.
  */
-import app from '../server/app'
+import app from '../server/app.js'
 
 export default app

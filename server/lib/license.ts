@@ -12,7 +12,7 @@
 import { createHmac, createHash, timingSafeEqual, randomBytes } from 'crypto'
 import jwt from 'jsonwebtoken'
 import { v4 as uuidv4 } from 'uuid'
-import { logger } from './logger'
+import { logger } from './logger.js'
 
 // ─── Activation code generation ───────────────────────────────────────────────
 

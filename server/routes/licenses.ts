@@ -14,16 +14,16 @@
  */
 import { Router, Request, Response } from 'express'
 import { z } from 'zod'
-import { supabase } from '../lib/supabase'
+import { supabase } from '../lib/supabase.js'
 import {
   verifyActivationCode,
   normalizeActivationCode,
   hashIp,
   issueDeviceToken,
   verifyDeviceToken,
-} from '../lib/license'
-import { activationRateLimit } from '../lib/rateLimit'
-import { logger } from '../lib/logger'
+} from '../lib/license.js'
+import { activationRateLimit } from '../lib/rateLimit.js'
+import { logger } from '../lib/logger.js'
 
 const router = Router()
 

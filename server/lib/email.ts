@@ -12,7 +12,7 @@
  * - The activation code is included in the email and is NOT stored raw anywhere else.
  */
 import { Resend } from 'resend'
-import { logger } from './logger'
+import { logger } from './logger.js'
 
 // ─── Provider initialization ──────────────────────────────────────────────────
 

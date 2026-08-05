@@ -10,7 +10,7 @@
  * No Cashfree secret is ever returned to the browser.
  */
 import { Cashfree, CFEnvironment } from 'cashfree-pg'
-import { logger } from './logger'
+import { logger } from './logger.js'
 
 let _client: InstanceType<typeof Cashfree> | null = null
 

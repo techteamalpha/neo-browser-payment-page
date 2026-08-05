@@ -7,11 +7,11 @@
  */
 import express from 'express'
 import cors from 'cors'
-import { generalRateLimit } from './lib/rateLimit'
-import { logger } from './lib/logger'
-import checkoutRouter from './routes/checkout'
-import webhookRouter from './routes/webhook'
-import licensesRouter from './routes/licenses'
+import { generalRateLimit } from './lib/rateLimit.js'
+import { logger } from './lib/logger.js'
+import checkoutRouter from './routes/checkout.js'
+import webhookRouter from './routes/webhook.js'
+import licensesRouter from './routes/licenses.js'
 
 const app = express()
 

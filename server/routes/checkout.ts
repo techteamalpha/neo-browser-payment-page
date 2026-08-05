@@ -12,10 +12,10 @@
 import { Router, Request, Response } from 'express'
 import { z } from 'zod'
 import { v4 as uuidv4 } from 'uuid'
-import { supabase } from '../lib/supabase'
-import { createCashfreeOrder } from '../lib/cashfree'
-import { checkoutRateLimit } from '../lib/rateLimit'
-import { logger } from '../lib/logger'
+import { supabase } from '../lib/supabase.js'
+import { createCashfreeOrder } from '../lib/cashfree.js'
+import { checkoutRateLimit } from '../lib/rateLimit.js'
+import { logger } from '../lib/logger.js'
 
 const router = Router()
 

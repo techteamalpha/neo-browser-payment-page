@@ -15,16 +15,16 @@
  */
 import { Router, Request, Response } from 'express'
 import { createHash } from 'crypto'
-import { supabase } from '../lib/supabase'
-import { verifyCashfreeWebhookSignature, fetchCashfreePayments } from '../lib/cashfree'
+import { supabase } from '../lib/supabase.js'
+import { verifyCashfreeWebhookSignature, fetchCashfreePayments } from '../lib/cashfree.js'
 import {
   generateActivationCode,
   normalizeActivationCode,
   hashActivationCode,
   getCodeLast4,
-} from '../lib/license'
-import { sendPurchaseEmail } from '../lib/email'
-import { logger } from '../lib/logger'
+} from '../lib/license.js'
+import { sendPurchaseEmail } from '../lib/email.js'
+import { logger } from '../lib/logger.js'
 
 const router = Router()
 
