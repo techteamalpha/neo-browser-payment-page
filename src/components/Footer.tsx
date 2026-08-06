@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start gap-2">
           <Link to="/" className="flex items-center gap-2 font-display font-bold text-[#E62429] text-xl leading-none hover:opacity-90 transition-opacity">
             <span className="text-lg">🕷️</span>
-            <span className="bg-gradient-to-r from-[#E62429] to-[#FF5257] bg-clip-text text-transparent">
+            <span className="text-[#E62429]">
               Neo-Browser
             </span>
           </Link>

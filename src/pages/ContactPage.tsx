@@ -115,7 +115,7 @@ export default function ContactPage() {
             <span>🕷️</span> Support Center
           </div>
           <h1 className="text-display-mobile md:text-headline-lg font-display font-extrabold text-white tracking-tight">
-            Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E62429] via-[#FF5257] to-[#60A5FA]">Neo-Browser Support.</span>
+            Contact <span className="text-[#E62429]">Neo-Browser Support.</span>
           </h1>
           <p className="text-body-lg text-[#94A3B8] leading-relaxed">
             Use the form below to get in touch with our team directly.
@@ -126,7 +126,7 @@ export default function ContactPage() {
         <form
           onSubmit={handleSubmit}
           noValidate
-          className="bg-[#0F172A] border border-[rgba(230,36,41,0.3)] shadow-[0_0_35px_rgba(230,36,41,0.2)] rounded-2xl p-8 space-y-6"
+          className="bg-[#0F172A] border border-[rgba(230,36,41,0.3)] rounded-2xl p-8 space-y-6"
           aria-label="Contact support form"
         >
           {/* Name */}

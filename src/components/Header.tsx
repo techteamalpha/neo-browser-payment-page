@@ -39,7 +39,7 @@ export default function Header() {
   }, [mobileOpen])
 
   return (
-    <header className="bg-[#080C14]/90 backdrop-blur-md border-b border-[rgba(230,36,41,0.25)] shadow-[0_4px_25px_rgba(230,36,41,0.15)] sticky top-0 z-50 w-full">
+    <header className="bg-[#080C14] border-b border-[rgba(230,36,41,0.25)] sticky top-0 z-50 w-full">
       {/* Skip navigation */}
       <a href="#main-content" className="skip-link">Skip to main content</a>
 
@@ -47,19 +47,19 @@ export default function Header() {
         {/* Logo / Wordmark */}
         <Link
           to="/"
-          className="flex items-center gap-2 font-display font-extrabold text-[#E62429] text-xl tracking-wider hover:scale-[1.03] transition-transform focus-visible:ring-2 focus-visible:ring-[#E62429] rounded"
+          className="flex items-center gap-2 font-display font-extrabold text-[#E62429] text-xl tracking-wider hover:opacity-90 transition-opacity focus-visible:ring-2 focus-visible:ring-[#E62429] rounded"
           aria-label="Neo-Browser — Home"
         >
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#E62429] to-[#0047BB] flex items-center justify-center text-white text-lg shadow-[0_0_15px_rgba(230,36,41,0.5)]">
+          <span className="w-8 h-8 rounded-lg bg-[#E62429] flex items-center justify-center text-white text-lg">
             🕸️
           </span>
-          <span className="bg-gradient-to-r from-[#E62429] via-[#FF5257] to-[#60A5FA] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(230,36,41,0.5)]">
+          <span className="text-[#E62429]">
             Neo-Browser
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav aria-label="Main navigation" className="hidden md:flex gap-1 items-center bg-[#0F172A]/80 border border-[rgba(230,36,41,0.2)] rounded-full px-3 py-1">
+        <nav aria-label="Main navigation" className="hidden md:flex gap-1 items-center bg-[#0F172A] border border-[rgba(230,36,41,0.2)] rounded-full px-3 py-1">
           {navLinks.map(({ to, label }) => (
             <NavLink
               key={to}
@@ -67,7 +67,7 @@ export default function Header() {
               className={({ isActive }) =>
                 `px-4 py-1.5 rounded-full text-label-sm font-semibold transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[#E62429] ${
                   isActive
-                    ? 'text-white bg-gradient-to-r from-[#E62429] to-[#0047BB] shadow-[0_0_12px_rgba(230,36,41,0.5)]'
+                    ? 'text-white bg-[#E62429]'
                     : 'text-[#94A3B8] hover:text-white hover:bg-[rgba(230,36,41,0.15)]'
                 }`
               }

@@ -36,11 +36,6 @@
     color: #F8FAFC;
     min-height: 100vh;
     margin: 0;
-    background-image: 
-      radial-gradient(ellipse at 50% -20%, rgba(230, 36, 41, 0.18), transparent 70%),
-      radial-gradient(ellipse at 80% 60%, rgba(0, 71, 187, 0.12), transparent 60%),
-      radial-gradient(ellipse at 10% 90%, rgba(230, 36, 41, 0.1), transparent 50%);
-    background-attachment: fixed;
   }
 
   /* Custom Spider Crimson Scrollbar */
@@ -74,7 +69,7 @@
   /* Skip link for accessibility */
   .skip-link {
     position: absolute;
-    top: -100%;
+    top: -100px;
     left: 0;
     background: #E62429;
     color: #fff;
@@ -83,21 +78,20 @@
     font-size: 14px;
     z-index: 9999;
     border-radius: 0 0 8px 0;
-    box-shadow: 0 0 15px rgba(230, 36, 41, 0.5);
   }
   .skip-link:focus {
     top: 0;
   }
 
-  /* Spider Red Primary Button */
+  /* Spider Red Primary Button - Solid colors only */
   .btn-primary {
-    @apply inline-flex items-center justify-center h-11 px-6 bg-gradient-to-r from-[#E62429] via-[#D32F2F] to-[#0047BB] text-white rounded-lg font-bold text-label-sm tracking-wide uppercase transition-all duration-300 shadow-[0_0_20px_rgba(230,36,41,0.4)] hover:shadow-[0_0_30px_rgba(230,36,41,0.7)] hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#E62429] focus:ring-offset-2 focus:ring-offset-[#080C14] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 border border-[rgba(255,255,255,0.2)];
+    @apply inline-flex items-center justify-center h-11 px-6 bg-[#E62429] text-white rounded-lg font-bold text-label-sm tracking-wide uppercase transition-all duration-200 hover:bg-[#CC1E23] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#E62429] focus:ring-offset-2 focus:ring-offset-[#080C14] disabled:opacity-60 disabled:cursor-not-allowed border border-[#E62429];
     min-width: 44px;
   }
 
-  /* Spider Blue Secondary Button */
+  /* Spider Secondary Button - Solid colors only */
   .btn-secondary {
-    @apply inline-flex items-center justify-center h-11 px-6 bg-[#0F172A] border border-[rgba(230,36,41,0.3)] text-white rounded-lg font-semibold text-label-sm transition-all duration-300 hover:bg-[#1E293B] hover:border-[#E62429] hover:shadow-[0_0_15px_rgba(230,36,41,0.3)] focus:outline-none focus:ring-2 focus:ring-[#E62429] focus:ring-offset-2 focus:ring-offset-[#080C14];
+    @apply inline-flex items-center justify-center h-11 px-6 bg-[#0F172A] border border-[rgba(230,36,41,0.3)] text-white rounded-lg font-semibold text-label-sm transition-all duration-200 hover:bg-[#1E293B] hover:border-[#E62429] focus:outline-none focus:ring-2 focus:ring-[#E62429] focus:ring-offset-2 focus:ring-offset-[#080C14];
     min-width: 44px;
   }
 

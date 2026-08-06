@@ -14,7 +14,7 @@ export default function CheckoutSuccessPage() {
     <div className="w-full max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-section-padding-mobile md:py-section-padding-desktop">
       <div className="max-w-lg mx-auto text-center">
         {/* Icon */}
-        <div className="w-20 h-20 rounded-full bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] shadow-[0_0_30px_rgba(230,36,41,0.4)] flex items-center justify-center mx-auto mb-6" aria-hidden="true">
+        <div className="w-20 h-20 rounded-full bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] flex items-center justify-center mx-auto mb-6" aria-hidden="true">
           <Clock size={36} className="text-[#E62429]" />
         </div>
 
@@ -22,7 +22,7 @@ export default function CheckoutSuccessPage() {
           Payment Submitted.
         </h1>
 
-        <div className="text-left bg-[#0F172A] border border-[rgba(230,36,41,0.3)] shadow-[0_0_30px_rgba(230,36,41,0.2)] rounded-2xl p-6 mb-8 space-y-4">
+        <div className="text-left bg-[#0F172A] border border-[rgba(230,36,41,0.3)] rounded-2xl p-6 mb-8 space-y-4">
           <div className="flex items-start gap-3">
             <span className="w-6 h-6 rounded-full bg-[#E62429] text-white font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
             <p className="text-body-lg text-[#E2E8F0]">

@@ -14,11 +14,11 @@ export default function FeaturesPage() {
       {/* Hero */}
       <section className="w-full max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-section-padding-mobile md:py-section-padding-desktop">
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] text-[#E62429] text-xs font-bold uppercase tracking-widest shadow-[0_0_12px_rgba(230,36,41,0.3)]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] text-[#E62429] text-xs font-bold uppercase tracking-widest">
             <span>🕷️</span> Spider-Matrix Capabilities
           </div>
           <h1 className="text-display-mobile md:text-headline-lg font-display font-extrabold text-white tracking-tight leading-tight">
-            Everything you need for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E62429] via-[#FF5257] to-[#60A5FA]">direct web browsing.</span>
+            Everything you need for <span className="text-[#E62429]">direct web browsing.</span>
           </h1>
           <p className="text-body-lg text-[#94A3B8] max-w-2xl mx-auto pt-2 leading-relaxed">
             A focused set of desktop browser capabilities built for speed, direct navigation, and developer utility.
@@ -39,8 +39,8 @@ export default function FeaturesPage() {
         <h2 id="features-grid-heading" className="sr-only">Feature details</h2>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
           {/* Row 1: Large (8) + Small (4) */}
-          <div className="md:col-span-8 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col justify-between hover:border-[#E62429] hover:shadow-[0_0_30px_rgba(230,36,41,0.3)] transition-all">
-            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center mb-6 shadow-md" aria-hidden="true">
+          <div className="md:col-span-8 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col justify-between hover:border-[#E62429] transition-all">
+            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center mb-6" aria-hidden="true">
               <Globe size={24} className="text-[#E62429]" />
             </div>
             <div>
@@ -50,8 +50,8 @@ export default function FeaturesPage() {
               </p>
             </div>
           </div>
-          <div className="md:col-span-4 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col justify-between hover:border-[#E62429] hover:shadow-[0_0_30px_rgba(230,36,41,0.3)] transition-all">
-            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center mb-6 shadow-md" aria-hidden="true">
+          <div className="md:col-span-4 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col justify-between hover:border-[#E62429] transition-all">
+            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center mb-6" aria-hidden="true">
               <RefreshCw size={24} className="text-[#E62429]" />
             </div>
             <div>
@@ -61,8 +61,8 @@ export default function FeaturesPage() {
           </div>
 
           {/* Row 2: three equal cards */}
-          <div className="md:col-span-4 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col justify-between hover:border-[#E62429] hover:shadow-[0_0_30px_rgba(230,36,41,0.3)] transition-all">
-            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center mb-6 shadow-md" aria-hidden="true">
+          <div className="md:col-span-4 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col justify-between hover:border-[#E62429] transition-all">
+            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center mb-6" aria-hidden="true">
               <Code2 size={24} className="text-[#E62429]" />
             </div>
             <div>
@@ -70,8 +70,8 @@ export default function FeaturesPage() {
               <p className="text-body-lg text-[#94A3B8] leading-relaxed">Press F12 or Ctrl+Shift+I to open developer tools instantly.</p>
             </div>
           </div>
-          <div className="md:col-span-4 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col justify-between hover:border-[#E62429] hover:shadow-[0_0_30px_rgba(230,36,41,0.3)] transition-all">
-            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center mb-6 shadow-md" aria-hidden="true">
+          <div className="md:col-span-4 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col justify-between hover:border-[#E62429] transition-all">
+            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center mb-6" aria-hidden="true">
               <Layout size={24} className="text-[#E62429]" />
             </div>
             <div>
@@ -79,8 +79,8 @@ export default function FeaturesPage() {
               <p className="text-body-lg text-[#94A3B8] leading-relaxed">A straightforward layout with all browsing controls easy to reach without clutter.</p>
             </div>
           </div>
-          <div className="md:col-span-4 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col justify-between hover:border-[#E62429] hover:shadow-[0_0_30px_rgba(230,36,41,0.3)] transition-all">
-            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center mb-6 shadow-md" aria-hidden="true">
+          <div className="md:col-span-4 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col justify-between hover:border-[#E62429] transition-all">
+            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center mb-6" aria-hidden="true">
               <Monitor size={24} className="text-[#E62429]" />
             </div>
             <div>
@@ -90,8 +90,8 @@ export default function FeaturesPage() {
           </div>
 
           {/* Row 3: full-width installation card */}
-          <div className="md:col-span-12 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col md:flex-row items-start md:items-center gap-6 hover:border-[#E62429] hover:shadow-[0_0_30px_rgba(230,36,41,0.3)] transition-all">
-            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center flex-shrink-0 shadow-md" aria-hidden="true">
+          <div className="md:col-span-12 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-2xl p-8 flex flex-col md:flex-row items-start md:items-center gap-6 hover:border-[#E62429] transition-all">
+            <div className="w-12 h-12 rounded-xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.3)] flex items-center justify-center flex-shrink-0" aria-hidden="true">
               <PackageOpen size={24} className="text-[#E62429]" />
             </div>
             <div>

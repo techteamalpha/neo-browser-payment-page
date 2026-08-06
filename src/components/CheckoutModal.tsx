@@ -110,7 +110,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/80 backdrop-blur-md"
+        className="absolute inset-0 bg-black/80"
         onClick={step === 'form' ? onClose : undefined}
         aria-hidden="true"
       />
@@ -118,10 +118,10 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
       {/* Modal panel */}
       <div
         ref={modalRef}
-        className="relative w-full max-w-md mx-auto bg-[#0B1120] rounded-2xl border border-[rgba(230,36,41,0.4)] shadow-[0_0_50px_rgba(230,36,41,0.35)] overflow-hidden z-10"
+        className="relative w-full max-w-md mx-auto bg-[#0B1120] rounded-2xl border border-[rgba(230,36,41,0.4)] overflow-hidden z-10"
       >
         {/* Accent bar */}
-        <div className="h-1.5 w-full bg-gradient-to-r from-[#E62429] via-[#FFD700] to-[#0047BB]" aria-hidden="true" />
+        <div className="h-1.5 w-full bg-[#E62429]" aria-hidden="true" />
 
         {/* Header */}
         <div className="flex items-center justify-between px-6 pt-6 pb-4">

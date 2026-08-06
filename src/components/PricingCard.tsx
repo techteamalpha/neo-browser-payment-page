@@ -13,9 +13,9 @@ export default function PricingCard() {
 
   return (
     <>
-      <div className="bg-[#0F172A]/95 border border-[rgba(230,36,41,0.35)] shadow-[0_0_35px_rgba(230,36,41,0.25)] rounded-2xl p-8 w-full max-w-md flex flex-col relative overflow-hidden mx-auto backdrop-blur-xl group hover:border-[#E62429] transition-all duration-300">
-        {/* Accent top border glow */}
-        <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#E62429] via-[#FFD700] to-[#0047BB]" aria-hidden="true" />
+      <div className="bg-[#0F172A] border border-[rgba(230,36,41,0.35)] rounded-2xl p-8 w-full max-w-md flex flex-col relative overflow-hidden mx-auto hover:border-[#E62429] transition-all duration-200">
+        {/* Accent top border */}
+        <div className="absolute top-0 left-0 w-full h-1.5 bg-[#E62429]" aria-hidden="true" />
 
         {/* Spider Emblem Badge */}
         <div className="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] text-[#E62429] text-xs font-bold uppercase tracking-wider mb-4">
@@ -27,7 +27,7 @@ export default function PricingCard() {
             Neo-Browser — ₹299
           </h2>
           <div className="flex items-baseline gap-2 mb-1">
-            <span className="text-6xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-[#E62429] via-[#FF4D52] to-[#FFD700] drop-shadow-[0_0_15px_rgba(230,36,41,0.6)]">
+            <span className="text-6xl font-display font-black text-[#E62429]">
               ₹299
             </span>
             <span className="text-label-sm text-[#94A3B8]">/ lifetime</span>

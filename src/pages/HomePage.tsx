@@ -40,11 +40,11 @@ export default function HomePage() {
 
           {/* Copy column */}
           <div className="md:col-span-5 flex flex-col gap-6">
-            <div className="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] text-[#E62429] text-xs font-bold uppercase tracking-wider shadow-[0_0_15px_rgba(230,36,41,0.3)]">
+            <div className="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] text-[#E62429] text-xs font-bold uppercase tracking-wider">
               <span>🕷️</span> SPIDER-MATRIX DESKTOP BROWSING
             </div>
             <h1 className="text-display-mobile md:text-display font-display font-extrabold text-white tracking-tight leading-tight">
-              A high-speed browser for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E62429] via-[#FF5257] to-[#60A5FA] drop-shadow-[0_0_20px_rgba(230,36,41,0.6)]">direct web access.</span>
+              A high-speed browser for <span className="text-[#E62429]">direct web access.</span>
             </h1>
             <p className="text-body-lg text-[#94A3B8] leading-relaxed">
               Neo-Browser provides a distraction-free, ultra-fast environment for accessing websites.
@@ -106,9 +106,9 @@ export default function HomePage() {
               <Link
                 key={href}
                 to={href}
-                className="block group bg-[#0F172A] rounded-2xl p-6 border border-[rgba(230,36,41,0.25)] hover:border-[#E62429] hover:shadow-[0_0_30px_rgba(230,36,41,0.3)] transition-all duration-300 h-full flex flex-col focus-visible:ring-2 focus-visible:ring-[#E62429]"
+                className="block group bg-[#0F172A] rounded-2xl p-6 border border-[rgba(230,36,41,0.25)] hover:border-[#E62429] transition-all duration-200 h-full flex flex-col focus-visible:ring-2 focus-visible:ring-[#E62429]"
               >
-                <div className={`w-12 h-12 rounded-xl ${accent} flex items-center justify-center mb-4 shadow-md`} aria-hidden="true">
+                <div className={`w-12 h-12 rounded-xl ${accent} flex items-center justify-center mb-4`} aria-hidden="true">
                   <IconComp size={22} />
                 </div>
                 <h3 className="text-title-lg font-display font-bold text-white mb-2 group-hover:text-[#E62429] transition-colors">{title}</h3>
@@ -141,9 +141,9 @@ export default function HomePage() {
             { step: '2', title: 'Complete secure checkout', desc: 'Pay ₹299 using Cashfree PG hosted checkout.' },
             { step: '3', title: 'Download and activate', desc: 'Receive instant download and activation code by email.' },
           ].map(({ step, title, desc }) => (
-            <div key={step} className="flex flex-col items-center text-center gap-4 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] p-8 rounded-2xl relative hover:border-[#E62429] transition-colors shadow-lg">
+            <div key={step} className="flex flex-col items-center text-center gap-4 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] p-8 rounded-2xl relative hover:border-[#E62429] transition-colors">
               <div
-                className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E62429] to-[#0047BB] text-white flex items-center justify-center font-display font-extrabold text-xl shadow-[0_0_15px_rgba(230,36,41,0.5)] flex-shrink-0"
+                className="w-12 h-12 rounded-full bg-[#E62429] text-white flex items-center justify-center font-display font-extrabold text-xl flex-shrink-0"
                 aria-label={`Step ${step}`}
               >
                 {step}

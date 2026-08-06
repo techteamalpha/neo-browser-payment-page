@@ -9,8 +9,8 @@ export default function CheckoutCancelledPage() {
 
   return (
     <div className="w-full max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-section-padding-mobile md:py-section-padding-desktop">
-      <div className="max-w-lg mx-auto text-center bg-[#0F172A] border border-[rgba(230,36,41,0.3)] rounded-2xl p-8 shadow-[0_0_30px_rgba(230,36,41,0.2)]">
-        <XCircle size={56} className="text-[#E62429] mx-auto mb-6 drop-shadow-[0_0_12px_#E62429]" aria-hidden="true" />
+      <div className="max-w-lg mx-auto text-center bg-[#0F172A] border border-[rgba(230,36,41,0.3)] rounded-2xl p-8">
+        <XCircle size={56} className="text-[#E62429] mx-auto mb-6" aria-hidden="true" />
         <h1 className="text-display-mobile font-display font-extrabold text-white mb-4 tracking-tight">
           Checkout Not Completed.
         </h1>

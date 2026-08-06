@@ -9,12 +9,12 @@ export default function NotFoundPage() {
 
   return (
     <div className="w-full max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-section-padding-mobile md:py-section-padding-desktop">
-      <div className="max-w-lg mx-auto text-center bg-[#0F172A] border border-[rgba(230,36,41,0.3)] rounded-2xl p-8 shadow-[0_0_30px_rgba(230,36,41,0.2)]">
+      <div className="max-w-lg mx-auto text-center bg-[#0F172A] border border-[rgba(230,36,41,0.3)] rounded-2xl p-8">
         <div
-          className="w-20 h-20 rounded-2xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] shadow-[0_0_20px_rgba(230,36,41,0.4)] flex items-center justify-center mx-auto mb-6"
+          className="w-20 h-20 rounded-2xl bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] flex items-center justify-center mx-auto mb-6"
           aria-hidden="true"
         >
-          <Globe size={40} className="text-[#E62429] drop-shadow-[0_0_10px_#E62429]" />
+          <Globe size={40} className="text-[#E62429]" />
         </div>
         <p className="text-xs font-bold uppercase tracking-widest text-[#E62429] bg-[rgba(230,36,41,0.15)] px-3 py-1 rounded-full border border-[rgba(230,36,41,0.3)] inline-block mb-3">
           🕷️ 404 — SPIDER MATRIX NOT FOUND

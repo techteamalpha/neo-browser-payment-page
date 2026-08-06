@@ -30,7 +30,7 @@ export default function ProductClarityPage() {
           <span>🕷️</span> Transparency & Scope
         </div>
         <h1 className="text-display-mobile md:text-headline-lg font-display font-extrabold text-white tracking-tight">
-          Clear product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E62429] via-[#FF5257] to-[#60A5FA]">information.</span>
+          Clear product <span className="text-[#E62429]">information.</span>
         </h1>
         <p className="text-body-lg text-[#94A3B8] leading-relaxed">
           Neo-Browser is described accurately according to its actual implemented desktop capabilities.
@@ -41,7 +41,7 @@ export default function ProductClarityPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-16">
         {/* What it does */}
         <section
-          className="bg-[#0F172A] border border-[rgba(16,185,129,0.3)] shadow-[0_0_25px_rgba(16,185,129,0.15)] rounded-2xl p-8 hover:border-[#10B981] transition-all"
+          className="bg-[#0F172A] border border-[rgba(16,185,129,0.3)] rounded-2xl p-8 hover:border-[#10B981] transition-all"
           aria-labelledby="does-heading"
         >
           <div className="flex items-center gap-3 mb-6">
@@ -64,7 +64,7 @@ export default function ProductClarityPage() {
 
         {/* What it does NOT claim */}
         <section
-          className="bg-[#0F172A] border border-[rgba(230,36,41,0.3)] shadow-[0_0_25px_rgba(230,36,41,0.15)] rounded-2xl p-8 hover:border-[#E62429] transition-all"
+          className="bg-[#0F172A] border border-[rgba(230,36,41,0.3)] rounded-2xl p-8 hover:border-[#E62429] transition-all"
           aria-labelledby="does-not-heading"
         >
           <div className="flex items-center gap-3 mb-6">

@@ -16,7 +16,7 @@ export default function PricingPage() {
             <span>🕷️</span> Simple One-Time Pricing
           </div>
           <h1 className="text-display-mobile md:text-headline-lg font-display font-extrabold text-white tracking-tight">
-            Simple pricing for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E62429] via-[#FF5257] to-[#FFD700]">Neo-Browser.</span>
+            Simple pricing for <span className="text-[#E62429]">Neo-Browser.</span>
           </h1>
           <p className="text-body-lg text-[#94A3B8] leading-relaxed">
             Choose an individual license for ₹299 and receive instant download & activation code via email.
