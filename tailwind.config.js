@@ -75,8 +75,9 @@ export default {
         content: '1160px',
       },
       fontFamily: {
-        sans: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
-        display: ['Orbitron', 'Outfit', 'sans-serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
+        display: ['Manrope', 'system-ui', 'sans-serif'],
+        body: ['Manrope', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display': ['52px', { lineHeight: '1.1', fontWeight: '800' }],
