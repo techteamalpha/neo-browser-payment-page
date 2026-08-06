@@ -19,18 +19,21 @@ const doesNotList = [
 
 export default function ProductClarityPage() {
   useEffect(() => {
-    document.title = 'Product Clarity — Neo-Browser'
+    document.title = 'Product Clarity — Neo-Browser Spider Edition'
   }, [])
 
   return (
     <div className="w-full max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-section-padding-mobile md:py-section-padding-desktop">
       {/* Heading */}
-      <div className="text-center max-w-2xl mx-auto mb-14">
-        <h1 className="text-display-mobile md:text-headline-lg font-bold text-on-surface tracking-tight mb-4">
-          Clear product information.
+      <div className="text-center max-w-2xl mx-auto mb-14 space-y-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] text-[#E62429] text-xs font-bold uppercase tracking-widest shadow-[0_0_12px_rgba(230,36,41,0.3)]">
+          <span>🕷️</span> Transparency & Scope
+        </div>
+        <h1 className="text-display-mobile md:text-headline-lg font-display font-extrabold text-white tracking-tight">
+          Clear product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E62429] via-[#FF5257] to-[#60A5FA]">information.</span>
         </h1>
-        <p className="text-body-lg text-secondary">
-          Neo-Browser is described according to its implemented capabilities.
+        <p className="text-body-lg text-[#94A3B8] leading-relaxed">
+          Neo-Browser is described accurately according to its actual implemented desktop capabilities.
         </p>
       </div>
 
@@ -38,22 +41,22 @@ export default function ProductClarityPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-16">
         {/* What it does */}
         <section
-          className="card p-8"
+          className="bg-[#0F172A] border border-[rgba(16,185,129,0.3)] shadow-[0_0_25px_rgba(16,185,129,0.15)] rounded-2xl p-8 hover:border-[#10B981] transition-all"
           aria-labelledby="does-heading"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-success/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
-              <CheckCircle size={20} className="text-success" />
+            <div className="w-10 h-10 rounded-xl bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+              <CheckCircle size={22} className="text-[#10B981]" />
             </div>
-            <h2 id="does-heading" className="text-title-lg font-semibold text-on-surface">
-              What Neo-Browser does
+            <h2 id="does-heading" className="text-title-lg font-display font-bold text-white">
+              What Neo-Browser DOES
             </h2>
           </div>
           <ul className="space-y-4" role="list">
             {doesList.map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <CheckCircle size={18} className="text-success flex-shrink-0 mt-0.5" aria-hidden="true" />
-                <span className="text-body-lg text-on-surface">{item}</span>
+                <CheckCircle size={18} className="text-[#10B981] flex-shrink-0 mt-0.5" aria-hidden="true" />
+                <span className="text-body-lg text-[#E2E8F0] font-medium">{item}</span>
               </li>
             ))}
           </ul>
@@ -61,22 +64,22 @@ export default function ProductClarityPage() {
 
         {/* What it does NOT claim */}
         <section
-          className="card p-8 bg-surface"
+          className="bg-[#0F172A] border border-[rgba(230,36,41,0.3)] shadow-[0_0_25px_rgba(230,36,41,0.15)] rounded-2xl p-8 hover:border-[#E62429] transition-all"
           aria-labelledby="does-not-heading"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-error-container flex items-center justify-center flex-shrink-0" aria-hidden="true">
-              <XCircle size={20} className="text-error" />
+            <div className="w-10 h-10 rounded-xl bg-red-950/80 border border-red-500/30 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+              <XCircle size={22} className="text-[#E62429]" />
             </div>
-            <h2 id="does-not-heading" className="text-title-lg font-semibold text-on-surface">
-              What Neo-Browser does not claim to do
+            <h2 id="does-not-heading" className="text-title-lg font-display font-bold text-white">
+              What Neo-Browser DOES NOT claim
             </h2>
           </div>
           <ul className="space-y-4" role="list">
             {doesNotList.map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <XCircle size={18} className="text-error flex-shrink-0 mt-0.5" aria-hidden="true" />
-                <span className="text-body-lg text-on-surface">{item}</span>
+                <XCircle size={18} className="text-[#E62429] flex-shrink-0 mt-0.5" aria-hidden="true" />
+                <span className="text-body-lg text-[#E2E8F0] font-medium">{item}</span>
               </li>
             ))}
           </ul>
@@ -84,11 +87,11 @@ export default function ProductClarityPage() {
       </div>
 
       {/* CTA */}
-      <div className="text-center border-t border-border pt-12">
-        <h2 className="text-headline-md font-bold text-on-surface mb-3">Have more questions?</h2>
-        <p className="text-body-lg text-secondary mb-6">Our FAQ covers common questions about Neo-Browser.</p>
-        <Link to="/faq" className="btn-primary inline-flex gap-2">
-          Read frequently asked questions <ArrowRight size={16} aria-hidden="true" />
+      <div className="text-center border-t border-[rgba(230,36,41,0.2)] pt-12">
+        <h2 className="text-headline-md font-display font-extrabold text-white mb-3">Have more questions?</h2>
+        <p className="text-body-lg text-[#94A3B8] mb-6">Our FAQ covers common questions about Neo-Browser.</p>
+        <Link to="/faq" className="btn-primary inline-flex gap-2 py-3.5 px-8 text-base">
+          Read frequently asked questions <ArrowRight size={18} aria-hidden="true" />
         </Link>
       </div>
     </div>

@@ -39,7 +39,7 @@ export default function Header() {
   }, [mobileOpen])
 
   return (
-    <header className="bg-surface border-b border-border shadow-sm sticky top-0 z-50 w-full">
+    <header className="bg-[#080C14]/90 backdrop-blur-md border-b border-[rgba(230,36,41,0.25)] shadow-[0_4px_25px_rgba(230,36,41,0.15)] sticky top-0 z-50 w-full">
       {/* Skip navigation */}
       <a href="#main-content" className="skip-link">Skip to main content</a>
 
@@ -47,23 +47,28 @@ export default function Header() {
         {/* Logo / Wordmark */}
         <Link
           to="/"
-          className="font-bold text-primary text-xl leading-none focus-visible:ring-2 focus-visible:ring-focus rounded"
+          className="flex items-center gap-2 font-display font-extrabold text-[#E62429] text-xl tracking-wider hover:scale-[1.03] transition-transform focus-visible:ring-2 focus-visible:ring-[#E62429] rounded"
           aria-label="Neo-Browser — Home"
         >
-          Neo-Browser
+          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#E62429] to-[#0047BB] flex items-center justify-center text-white text-lg shadow-[0_0_15px_rgba(230,36,41,0.5)]">
+            🕸️
+          </span>
+          <span className="bg-gradient-to-r from-[#E62429] via-[#FF5257] to-[#60A5FA] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(230,36,41,0.5)]">
+            Neo-Browser
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav aria-label="Main navigation" className="hidden md:flex gap-2 items-center">
+        <nav aria-label="Main navigation" className="hidden md:flex gap-1 items-center bg-[#0F172A]/80 border border-[rgba(230,36,41,0.2)] rounded-full px-3 py-1">
           {navLinks.map(({ to, label }) => (
             <NavLink
               key={to}
               to={to}
               className={({ isActive }) =>
-                `px-3 py-1.5 rounded text-label-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-focus ${
+                `px-4 py-1.5 rounded-full text-label-sm font-semibold transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[#E62429] ${
                   isActive
-                    ? 'text-primary border-b-2 border-primary font-semibold'
-                    : 'text-secondary hover:text-primary hover:bg-surface-container-low'
+                    ? 'text-white bg-gradient-to-r from-[#E62429] to-[#0047BB] shadow-[0_0_12px_rgba(230,36,41,0.5)]'
+                    : 'text-[#94A3B8] hover:text-white hover:bg-[rgba(230,36,41,0.15)]'
                 }`
               }
             >
@@ -78,7 +83,7 @@ export default function Header() {
             to="/pricing"
             className="hidden md:inline-flex btn-primary"
           >
-            Download Now
+            Get Neo-Browser
           </Link>
 
           {/* Mobile menu button */}
@@ -88,7 +93,7 @@ export default function Header() {
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-on-surface hover:text-primary hover:bg-surface-container-low rounded transition-colors focus-visible:ring-2 focus-visible:ring-focus"
+            className="md:hidden p-2 text-white hover:text-[#E62429] hover:bg-[rgba(230,36,41,0.15)] rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-[#E62429]"
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -100,7 +105,7 @@ export default function Header() {
         <div
           ref={menuRef}
           id="mobile-menu"
-          className="md:hidden bg-surface border-t border-border absolute top-16 left-0 w-full z-40 shadow-md"
+          className="md:hidden bg-[#0F172A] border-t border-[rgba(230,36,41,0.25)] absolute top-16 left-0 w-full z-40 shadow-2xl"
           role="dialog"
           aria-label="Mobile navigation"
           aria-modal="true"
@@ -111,10 +116,10 @@ export default function Header() {
                 key={to}
                 to={to}
                 className={({ isActive }) =>
-                  `px-4 py-3 rounded text-body-lg font-medium transition-colors min-h-[44px] flex items-center ${
+                  `px-4 py-3 rounded-lg text-body-lg font-medium transition-colors min-h-[44px] flex items-center ${
                     isActive
-                      ? 'text-primary bg-surface-container-low font-semibold'
-                      : 'text-secondary hover:text-primary hover:bg-surface-container-low'
+                      ? 'text-white bg-[#E62429] font-bold shadow-[0_0_15px_rgba(230,36,41,0.4)]'
+                      : 'text-[#94A3B8] hover:text-white hover:bg-[rgba(230,36,41,0.15)]'
                   }`
                 }
               >
@@ -123,9 +128,9 @@ export default function Header() {
             ))}
             <Link
               to="/pricing"
-              className="btn-primary mt-2 w-full"
+              className="btn-primary mt-3 w-full"
             >
-              Download Now
+              Get Neo-Browser — ₹299
             </Link>
           </nav>
         </div>

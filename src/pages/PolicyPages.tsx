@@ -17,30 +17,30 @@ export function PolicyPageTemplate({ title, lastUpdated, intro, sections, legalN
   return (
     <div className="w-full max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-section-padding-mobile md:py-section-padding-desktop">
       <div className="max-w-3xl mx-auto">
-        <header className="mb-10">
-          <h1 className="text-display-mobile md:text-headline-lg font-bold text-on-surface tracking-tight mb-3">
+        <header className="mb-10 space-y-3">
+          <h1 className="text-display-mobile md:text-headline-lg font-display font-extrabold text-white tracking-tight">
             {title}
           </h1>
-          <p className="text-label-sm text-text-muted">Last updated: {lastUpdated}</p>
-          {intro && <p className="text-body-lg text-secondary mt-4">{intro}</p>}
+          <p className="text-xs font-mono text-[#94A3B8]">Last updated: {lastUpdated}</p>
+          {intro && <p className="text-body-lg text-[#94A3B8] mt-4 leading-relaxed">{intro}</p>}
         </header>
 
         {legalNotice && (
           <div
             role="note"
-            className="mb-8 p-4 bg-warning-bg border border-warning-border rounded-lg"
+            className="mb-8 p-4 bg-[#1E1B13] border border-[rgba(255,215,0,0.3)] rounded-xl"
           >
-            <p className="text-label-sm text-warning-text font-medium">{legalNotice}</p>
+            <p className="text-xs text-[#FFD700] font-bold tracking-wide uppercase">{legalNotice}</p>
           </div>
         )}
 
         <div className="space-y-10">
           {sections.map((s, i) => (
-            <section key={i} className="policy-section" aria-labelledby={`section-${i}`}>
-              <h2 id={`section-${i}`} className="text-title-lg font-semibold text-on-surface mb-4">
+            <section key={i} className="bg-[#0F172A] border border-[rgba(230,36,41,0.2)] rounded-2xl p-8 shadow-lg hover:border-[#E62429] transition-colors" aria-labelledby={`section-${i}`}>
+              <h2 id={`section-${i}`} className="text-title-lg font-display font-bold text-white mb-4">
                 {s.heading}
               </h2>
-              <div className="text-body-lg text-secondary whitespace-pre-line">
+              <div className="text-body-lg text-[#94A3B8] whitespace-pre-line leading-relaxed">
                 {s.content}
               </div>
             </section>

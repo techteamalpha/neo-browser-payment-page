@@ -28,8 +28,10 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
           <div
             key={i}
             role="listitem"
-            className={`bg-surface border rounded-lg overflow-hidden transition-shadow duration-200 ${
-              isOpen ? 'border-primary shadow-sm' : 'border-border'
+            className={`bg-[#0F172A] border rounded-xl overflow-hidden transition-all duration-200 ${
+              isOpen
+                ? 'border-[#E62429] shadow-[0_0_25px_rgba(230,36,41,0.25)]'
+                : 'border-[rgba(230,36,41,0.25)] hover:border-[#E62429]'
             }`}
           >
             <h3>
@@ -38,14 +40,14 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => toggle(i)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 min-h-[44px] focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-inset focus:outline-none group"
+                className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 min-h-[44px] focus-visible:ring-2 focus-visible:ring-[#E62429] focus-visible:ring-inset focus:outline-none group"
               >
-                <span className="text-title-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                <span className="text-title-md font-bold text-white group-hover:text-[#E62429] transition-colors">
                   {item.question}
                 </span>
                 <ChevronDown
                   size={20}
-                  className={`faq-chevron flex-shrink-0 text-primary transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                  className={`faq-chevron flex-shrink-0 text-[#E62429] transition-transform duration-200 ${isOpen ? 'rotate-180 drop-shadow-[0_0_8px_#E62429]' : ''}`}
                   aria-hidden="true"
                 />
               </button>
@@ -57,7 +59,7 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
               hidden={!isOpen}
             >
               <div className="px-6 pb-6 faq-content">
-                <p className="text-body-lg text-on-surface-variant">{item.answer}</p>
+                <p className="text-body-lg text-[#94A3B8] leading-relaxed">{item.answer}</p>
               </div>
             </div>
           </div>

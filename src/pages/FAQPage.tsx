@@ -37,18 +37,21 @@ const faqItems: FAQItem[] = [
 
 export default function FAQPage() {
   useEffect(() => {
-    document.title = 'FAQ — Neo-Browser'
+    document.title = 'FAQ — Neo-Browser Spider Edition'
   }, [])
 
   return (
     <div className="w-full max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-section-padding-mobile md:py-section-padding-desktop">
       {/* Heading */}
-      <div className="text-center max-w-2xl mx-auto mb-12">
-        <h1 className="text-display-mobile md:text-headline-lg font-bold text-on-surface tracking-tight mb-4">
-          Frequently asked questions
+      <div className="text-center max-w-2xl mx-auto mb-12 space-y-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] text-[#E62429] text-xs font-bold uppercase tracking-widest shadow-[0_0_12px_rgba(230,36,41,0.3)]">
+          <span>🕷️</span> Support Knowledge Base
+        </div>
+        <h1 className="text-display-mobile md:text-headline-lg font-display font-extrabold text-white tracking-tight">
+          Frequently asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E62429] via-[#FF5257] to-[#60A5FA]">questions.</span>
         </h1>
-        <p className="text-body-lg text-secondary">
-          Common questions about Neo-Browser, its features, and how to get support.
+        <p className="text-body-lg text-[#94A3B8] leading-relaxed">
+          Common questions about Neo-Browser, licensing, and support.
         </p>
       </div>
 

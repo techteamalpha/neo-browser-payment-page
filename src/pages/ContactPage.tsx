@@ -86,20 +86,20 @@ export default function ContactPage() {
     }
   }
 
-  const labelClass = 'block text-label-sm font-semibold text-on-surface mb-1.5'
+  const labelClass = 'block text-label-sm font-semibold text-white mb-1.5'
   const inputClass = (err?: string) =>
-    `w-full border rounded px-4 py-3 text-body-lg text-on-surface bg-surface placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-focus transition-colors ${
-      err ? 'border-error focus:ring-error' : 'border-border hover:border-outline'
+    `w-full border rounded-lg px-4 py-3 text-body-lg text-white bg-[#0F172A] placeholder:text-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#E62429] transition-all ${
+      err ? 'border-error focus:ring-error' : 'border-[rgba(230,36,41,0.3)] hover:border-[#E62429]'
     }`
 
   if (formState === 'success') {
     return (
       <div className="w-full max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-section-padding-mobile md:py-section-padding-desktop">
-        <div className="max-w-lg mx-auto text-center">
-          <CheckCircle size={48} className="text-success mx-auto mb-6" aria-hidden="true" />
-          <h1 className="text-headline-md font-bold text-on-surface mb-3">Message sent</h1>
-          <p className="text-body-lg text-secondary">
-            Thank you for reaching out. We'll review your message and get back to you at the email you provided.
+        <div className="max-w-lg mx-auto text-center bg-[#0F172A] border border-[rgba(230,36,41,0.3)] rounded-2xl p-8 shadow-[0_0_30px_rgba(230,36,41,0.2)]">
+          <CheckCircle size={48} className="text-[#10B981] mx-auto mb-6" aria-hidden="true" />
+          <h1 className="text-headline-md font-display font-extrabold text-white mb-3">Message Sent</h1>
+          <p className="text-body-lg text-[#94A3B8]">
+            Thank you for reaching out. We will review your message and respond to your email promptly.
           </p>
         </div>
       </div>
@@ -110,19 +110,15 @@ export default function ContactPage() {
     <div className="w-full max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-section-padding-mobile md:py-section-padding-desktop">
       <div className="max-w-2xl mx-auto">
         {/* Heading */}
-        <div className="mb-10">
-          <h1 className="text-display-mobile md:text-headline-lg font-bold text-on-surface tracking-tight mb-3">
-            Contact Neo-Browser support.
+        <div className="mb-10 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[rgba(230,36,41,0.15)] border border-[rgba(230,36,41,0.4)] text-[#E62429] text-xs font-bold uppercase tracking-widest shadow-[0_0_12px_rgba(230,36,41,0.3)]">
+            <span>🕷️</span> Support Center
+          </div>
+          <h1 className="text-display-mobile md:text-headline-lg font-display font-extrabold text-white tracking-tight">
+            Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E62429] via-[#FF5257] to-[#60A5FA]">Neo-Browser Support.</span>
           </h1>
-          <p className="text-body-lg text-secondary">
-            Use the form below to get in touch. You can also email us at{' '}
-            <a
-              href="mailto:[support email]"
-              className="text-primary font-medium underline hover:no-underline focus-visible:ring-2 focus-visible:ring-focus rounded"
-            >
-              [support email]
-            </a>
-            .
+          <p className="text-body-lg text-[#94A3B8] leading-relaxed">
+            Use the form below to get in touch with our team directly.
           </p>
         </div>
 
@@ -130,13 +126,13 @@ export default function ContactPage() {
         <form
           onSubmit={handleSubmit}
           noValidate
-          className="card p-8 space-y-6"
+          className="bg-[#0F172A] border border-[rgba(230,36,41,0.3)] shadow-[0_0_35px_rgba(230,36,41,0.2)] rounded-2xl p-8 space-y-6"
           aria-label="Contact support form"
         >
           {/* Name */}
           <div>
             <label htmlFor="field-name" className={labelClass}>
-              <User size={14} className="inline mr-1 -mt-0.5" aria-hidden="true" />
+              <User size={14} className="inline mr-1.5 -mt-0.5 text-[#E62429]" aria-hidden="true" />
               Name
             </label>
             <input
@@ -161,7 +157,7 @@ export default function ContactPage() {
           {/* Email */}
           <div>
             <label htmlFor="field-email" className={labelClass}>
-              <Mail size={14} className="inline mr-1 -mt-0.5" aria-hidden="true" />
+              <Mail size={14} className="inline mr-1.5 -mt-0.5 text-[#E62429]" aria-hidden="true" />
               Email
             </label>
             <input
@@ -186,9 +182,9 @@ export default function ContactPage() {
           {/* Order ID (optional) */}
           <div>
             <label htmlFor="field-orderId" className={labelClass}>
-              <Hash size={14} className="inline mr-1 -mt-0.5" aria-hidden="true" />
+              <Hash size={14} className="inline mr-1.5 -mt-0.5 text-[#E62429]" aria-hidden="true" />
               Order ID{' '}
-              <span className="font-normal text-text-muted">(optional)</span>
+              <span className="font-normal text-[#94A3B8]">(optional)</span>
             </label>
             <input
               id="field-orderId"
@@ -203,7 +199,7 @@ export default function ContactPage() {
           {/* Subject */}
           <div>
             <label htmlFor="field-subject" className={labelClass}>
-              <FileText size={14} className="inline mr-1 -mt-0.5" aria-hidden="true" />
+              <FileText size={14} className="inline mr-1.5 -mt-0.5 text-[#E62429]" aria-hidden="true" />
               Subject
             </label>
             <input
@@ -227,7 +223,7 @@ export default function ContactPage() {
           {/* Message */}
           <div>
             <label htmlFor="field-message" className={labelClass}>
-              <MessageSquare size={14} className="inline mr-1 -mt-0.5" aria-hidden="true" />
+              <MessageSquare size={14} className="inline mr-1.5 -mt-0.5 text-[#E62429]" aria-hidden="true" />
               Message
             </label>
             <textarea
@@ -250,8 +246,8 @@ export default function ContactPage() {
 
           {/* Global error */}
           {formState === 'error' && (
-            <div role="alert" className="flex items-start gap-2 p-3 bg-error-container text-on-error-container rounded text-label-sm">
-              <AlertCircle size={16} className="flex-shrink-0 mt-0.5" aria-hidden="true" />
+            <div role="alert" className="flex items-start gap-2 p-3 bg-red-950/80 border border-red-500/50 text-red-200 rounded-lg text-label-sm">
+              <AlertCircle size={16} className="flex-shrink-0 mt-0.5 text-red-400" aria-hidden="true" />
               <p>{errorMessage}</p>
             </div>
           )}
@@ -259,17 +255,17 @@ export default function ContactPage() {
           <button
             type="submit"
             disabled={formState === 'loading'}
-            className="btn-primary w-full gap-2"
+            className="btn-primary w-full gap-2 text-base py-3.5"
             aria-busy={formState === 'loading'}
           >
             {formState === 'loading' ? (
               <>
-                <Loader2 size={16} className="animate-spin" aria-hidden="true" />
-                Sending…
+                <Loader2 size={18} className="animate-spin" aria-hidden="true" />
+                Sending message…
               </>
             ) : (
               <>
-                <SendHorizonal size={16} aria-hidden="true" />
+                <SendHorizonal size={18} aria-hidden="true" />
                 Send message
               </>
             )}

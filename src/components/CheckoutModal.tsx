@@ -97,20 +97,20 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
     }
   }
 
-  const labelClass = 'block text-label-sm font-semibold text-on-surface mb-1.5'
+  const labelClass = 'block text-label-sm font-semibold text-white mb-1.5'
   const inputClass = (err?: string) =>
-    `w-full border rounded px-4 py-3 text-body-lg text-on-surface bg-surface placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-focus transition-colors ${err ? 'border-error' : 'border-border hover:border-outline'}`
+    `w-full border rounded-lg px-4 py-3 text-body-lg text-white bg-[#0F172A] placeholder:text-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#E62429] transition-all ${err ? 'border-error' : 'border-[rgba(230,36,41,0.3)] hover:border-[#E62429]'}`
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="checkout-modal-title"
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/40"
+        className="absolute inset-0 bg-black/80 backdrop-blur-md"
         onClick={step === 'form' ? onClose : undefined}
         aria-hidden="true"
       />
@@ -118,21 +118,21 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
       {/* Modal panel */}
       <div
         ref={modalRef}
-        className="relative w-full max-w-md mx-4 bg-surface rounded-xl border border-border shadow-xl overflow-hidden"
+        className="relative w-full max-w-md mx-auto bg-[#0B1120] rounded-2xl border border-[rgba(230,36,41,0.4)] shadow-[0_0_50px_rgba(230,36,41,0.35)] overflow-hidden z-10"
       >
         {/* Accent bar */}
-        <div className="h-1 w-full bg-primary" aria-hidden="true" />
+        <div className="h-1.5 w-full bg-gradient-to-r from-[#E62429] via-[#FFD700] to-[#0047BB]" aria-hidden="true" />
 
         {/* Header */}
         <div className="flex items-center justify-between px-6 pt-6 pb-4">
-          <h2 id="checkout-modal-title" className="text-title-lg font-bold text-on-surface">
-            Complete your purchase
+          <h2 id="checkout-modal-title" className="text-title-lg font-display font-extrabold text-white flex items-center gap-2">
+            <span>🕷️</span> Complete your purchase
           </h2>
           {step === 'form' && (
             <button
               onClick={onClose}
               aria-label="Close checkout"
-              className="text-text-muted hover:text-on-surface transition-colors p-1 rounded focus-visible:ring-2 focus-visible:ring-focus"
+              className="text-[#94A3B8] hover:text-white hover:bg-[rgba(230,36,41,0.2)] transition-colors p-1.5 rounded-lg focus-visible:ring-2 focus-visible:ring-[#E62429]"
             >
               <X size={20} />
             </button>
@@ -140,23 +140,23 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
         </div>
 
         {/* Price summary */}
-        <div className="mx-6 mb-4 bg-surface-container-low rounded-lg px-4 py-3 flex items-center justify-between">
+        <div className="mx-6 mb-4 bg-[#0F172A] border border-[rgba(230,36,41,0.25)] rounded-xl px-4 py-3 flex items-center justify-between shadow-inner">
           <div>
-            <p className="text-label-sm font-semibold text-on-surface">Neo-Browser Individual</p>
-            <p className="text-xs text-text-muted">One-time license · Single device</p>
+            <p className="text-label-sm font-bold text-white">Neo-Browser Individual</p>
+            <p className="text-xs text-[#94A3B8]">One-time license · Single device</p>
           </div>
-          <p className="text-xl font-bold text-primary">₹299</p>
+          <p className="text-2xl font-display font-extrabold text-[#E62429]">₹299</p>
         </div>
 
         {/* Loading state */}
         {(step === 'loading' || step === 'redirecting') && (
           <div className="px-6 pb-8 flex flex-col items-center gap-4 text-center">
-            <Loader2 size={40} className="animate-spin text-primary" aria-hidden="true" />
+            <Loader2 size={40} className="animate-spin text-[#E62429]" aria-hidden="true" />
             <div>
-              <p className="font-semibold text-on-surface">
+              <p className="font-bold text-white text-lg">
                 {step === 'redirecting' ? 'Opening secure checkout…' : 'Preparing checkout…'}
               </p>
-              <p className="text-label-sm text-text-muted mt-1">
+              <p className="text-label-sm text-[#94A3B8] mt-1">
                 You will be redirected to Cashfree's secure payment page.
               </p>
             </div>
@@ -169,7 +169,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
             {/* Email */}
             <div>
               <label htmlFor="checkout-email" className={labelClass}>
-                <Mail size={13} className="inline mr-1 -mt-0.5" aria-hidden="true" />
+                <Mail size={14} className="inline mr-1.5 -mt-0.5 text-[#E62429]" aria-hidden="true" />
                 Email address
               </label>
               <input
@@ -190,7 +190,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                   <AlertCircle size={12} aria-hidden="true" /> {errors.email}
                 </p>
               )}
-              <p className="mt-1 text-xs text-text-muted">
+              <p className="mt-1 text-xs text-[#94A3B8]">
                 Your activation code will be emailed here after payment verification.
               </p>
             </div>
@@ -198,11 +198,11 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
             {/* Phone */}
             <div>
               <label htmlFor="checkout-phone" className={labelClass}>
-                <Phone size={13} className="inline mr-1 -mt-0.5" aria-hidden="true" />
+                <Phone size={14} className="inline mr-1.5 -mt-0.5 text-[#E62429]" aria-hidden="true" />
                 Mobile number
               </label>
               <div className="flex">
-                <span className="flex items-center px-3 bg-surface-container-low border border-r-0 border-border rounded-l text-text-muted text-sm font-medium select-none">
+                <span className="flex items-center px-3 bg-[#0F172A] border border-r-0 border-[rgba(230,36,41,0.3)] rounded-l-lg text-[#94A3B8] text-sm font-semibold select-none">
                   +91
                 </span>
                 <input
@@ -216,7 +216,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                   maxLength={12}
                   aria-describedby={errors.phone ? 'err-phone' : 'phone-hint'}
                   aria-invalid={!!errors.phone}
-                  className={`flex-grow border rounded-r px-4 py-3 text-body-lg text-on-surface bg-surface placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-focus transition-colors ${errors.phone ? 'border-error' : 'border-border hover:border-outline'}`}
+                  className={`flex-grow border rounded-r-lg px-4 py-3 text-body-lg text-white bg-[#0F172A] placeholder:text-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#E62429] transition-all ${errors.phone ? 'border-error' : 'border-[rgba(230,36,41,0.3)] hover:border-[#E62429]'}`}
                 />
               </div>
               {errors.phone ? (
@@ -224,7 +224,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                   <AlertCircle size={12} aria-hidden="true" /> {errors.phone}
                 </p>
               ) : (
-                <p id="phone-hint" className="mt-1 text-xs text-text-muted">
+                <p id="phone-hint" className="mt-1 text-xs text-[#94A3B8]">
                   Collected for payment processing by Cashfree only. Not stored in marketing lists.
                 </p>
               )}
@@ -243,14 +243,14 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                     aria-describedby={errors.agreed ? 'err-agreed' : undefined}
                     aria-invalid={!!errors.agreed}
                   />
-                  <div className={`w-5 h-5 border-2 rounded flex items-center justify-center transition-colors ${agreed ? 'bg-primary border-primary' : errors.agreed ? 'border-error' : 'border-border group-hover:border-primary'}`}>
+                  <div className={`w-5 h-5 border-2 rounded flex items-center justify-center transition-colors ${agreed ? 'bg-[#E62429] border-[#E62429]' : errors.agreed ? 'border-error' : 'border-[rgba(230,36,41,0.4)] group-hover:border-[#E62429]'}`}>
                     {agreed && <CheckSquare size={14} className="text-white" aria-hidden="true" />}
                   </div>
                 </div>
-                <span className="text-sm text-on-surface leading-relaxed">
+                <span className="text-sm text-[#E2E8F0] leading-relaxed">
                   I agree to the{' '}
-                  <Link to="/terms" target="_blank" className="text-primary underline hover:no-underline">Terms of Service</Link>,{' '}
-                  <Link to="/privacy" target="_blank" className="text-primary underline hover:no-underline">Privacy Policy</Link>, and{' '}
+                  <Link to="/terms" target="_blank" className="text-[#E62429] font-semibold underline hover:text-[#FF5257]">Terms of Service</Link>,{' '}
+                  <Link to="/privacy" target="_blank" className="text-[#E62429] font-semibold underline hover:text-[#FF5257]">Privacy Policy</Link>, and{' '}
                   Refund Policy.
                 </span>
               </label>
@@ -263,11 +263,11 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 
             {/* Form-level error */}
             {errors.form && (
-              <div role="alert" className="flex items-start gap-2 p-3 bg-error-container text-on-error-container rounded text-label-sm">
-                <AlertCircle size={16} className="flex-shrink-0 mt-0.5" aria-hidden="true" />
+              <div role="alert" className="flex items-start gap-2 p-3 bg-red-950/80 border border-red-500/50 text-red-200 rounded-lg text-label-sm">
+                <AlertCircle size={16} className="flex-shrink-0 mt-0.5 text-red-400" aria-hidden="true" />
                 <div>
                   <p>{errors.form}</p>
-                  <button type="submit" className="font-semibold underline mt-1 hover:no-underline">
+                  <button type="submit" className="font-semibold underline mt-1 hover:no-underline text-white">
                     Try again
                   </button>
                 </div>
@@ -277,15 +277,15 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
             {/* Submit */}
             <button
               type="submit"
-              className="btn-primary w-full gap-2"
+              className="btn-primary w-full gap-2 text-base py-3"
               disabled={isSubmitting}
             >
               <Lock size={16} aria-hidden="true" />
               Continue to secure checkout — ₹299
             </button>
 
-            <p className="text-center text-xs text-text-muted">
-              <Lock size={11} className="inline mr-1" aria-hidden="true" />
+            <p className="text-center text-xs text-[#94A3B8]">
+              <Lock size={11} className="inline mr-1 text-[#E62429]" aria-hidden="true" />
               Secure payment via Cashfree. Your card details are never shared with us.
             </p>
           </form>
